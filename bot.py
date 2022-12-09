@@ -4,6 +4,8 @@
 import os
 from config import Config
 from pyrogram import Client as Clinton
+from aiohttp import web
+from plugins import web_server
 
 if __name__ == "__main__" :
     if not os.path.isdir(Config.DOWNLOAD_LOCATION):
@@ -15,3 +17,7 @@ if __name__ == "__main__" :
     api_hash=Config.API_HASH,
     plugins=plugins)
     Warrior.run()
+ app = web.AppRunner(await web_server())
+        await app.setup()
+        bind_address = "0.0.0.0"
+        await web.TCPSite(app, bind_address, PORT).start()
