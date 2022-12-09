@@ -31,3 +31,5 @@ class Config(object):
     DATABASE_URL = os.environ.get("DATABASE_URL", "")
 
     MAX_RESULTS = "50"
+
+    PORT = os.environ.get("PORT", "8080")
