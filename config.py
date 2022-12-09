@@ -32,4 +32,3 @@ class Config(object):
 
     MAX_RESULTS = "50"
 
-    PORT = os.environ.get("PORT", "8080")
