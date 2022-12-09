@@ -2,7 +2,7 @@
 # (c) Shrimadhav U K | Modifieded By @LISA_FAN_LK
 
 import os
-from config import Config, PORT
+from config import Config
 from pyrogram import Client as Clinton
 from aiohttp import web
 from plugins import web_server
